@@ -246,20 +246,11 @@ namespace OOP_lab_7_7_2
             new Output().Write();
         }
 
-        public void SortByTemperature()
+        public void SortByTemperatureAndWindSpeed()
         {
             Console.WriteLine();
 
-            Array.Sort(Program.weather, new Weather.SortByTemperature());
-
-            new Output().Write();
-        }
-
-        public void SortByWindSpeed()
-        {
-            Console.WriteLine();
-
-            Array.Sort(Program.weather, new Weather.SortByWindSpeed());
+            Array.Sort(Program.weather, new Weather.SortByTemperatureAndWindSpeed());
 
             new Output().Write();
         }

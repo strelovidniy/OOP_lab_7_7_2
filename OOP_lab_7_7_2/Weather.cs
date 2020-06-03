@@ -92,7 +92,7 @@ namespace OOP_lab_7_7_2
             return 0;
         }
 
-        public class SortByTemperature : IComparer
+        public class SortByTemperatureAndWindSpeed : IComparer
         {
             int IComparer.Compare(object x, object y)
             {
@@ -109,23 +109,12 @@ namespace OOP_lab_7_7_2
                     return -1;
                 }
 
-                return 0;
-            }
-        }
-
-        public class SortByWindSpeed : IComparer
-        {
-            int IComparer.Compare(object x, object y)
-            {
-                Weather weather1 = (Weather)x;
-                Weather weather2 = (Weather)y;
-
-                if (weather1.WindSpeed > weather2.WindSpeed)
+                if ((weather1.Temperature == weather2.Temperature) && (weather1.WindSpeed > weather2.WindSpeed))
                 {
                     return 1;
                 }
 
-                if (weather1.WindSpeed < weather2.WindSpeed)
+                if ((weather1.Temperature == weather2.Temperature) && (weather1.WindSpeed < weather2.WindSpeed))
                 {
                     return -1;
                 }

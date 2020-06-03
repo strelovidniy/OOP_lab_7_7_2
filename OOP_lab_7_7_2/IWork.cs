@@ -14,9 +14,7 @@ namespace OOP_lab_7_7_2
 
         public void SortByDate();
 
-        public void SortByTemperature();
-        
-        public void SortByWindSpeed();
+        public void SortByTemperatureAndWindSpeed();
 
         public void InitialiseBase(int n);
     }

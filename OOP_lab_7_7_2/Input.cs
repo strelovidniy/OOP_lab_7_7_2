@@ -37,8 +37,7 @@ namespace OOP_lab_7_7_2
             Console.WriteLine("Знищення записiв: -");
             Console.WriteLine("Виведення записiв: Enter");
             Console.WriteLine("Сортування за датою: D");
-            Console.WriteLine("Сортування за температурою повiтря: T");
-            Console.WriteLine("Сортування за атмосферним тиском: W");
+            Console.WriteLine("Сортування за температурою повiтря та швидкiстю вiтру: S");
             Console.WriteLine("Вихiд: Esc");
 
             ConsoleKey key = Console.ReadKey().Key;
@@ -57,12 +56,8 @@ namespace OOP_lab_7_7_2
                     new Work().SortByDate();
                     goto Start;
 
-                case ConsoleKey.T:
-                    new Work().SortByTemperature();
-                    goto Start;
-
-                case ConsoleKey.W:
-                    new Work().SortByWindSpeed();
+                case ConsoleKey.S:
+                    new Work().SortByTemperatureAndWindSpeed();
                     goto Start;
 
                 case ConsoleKey.OemMinus:
